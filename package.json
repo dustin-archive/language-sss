@@ -1,0 +1,29 @@
+{
+  "name": "language-sss",
+  "description": "SugarSS support in Atom",
+  "version": "0.0.0",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "https://github.com/dustindowell22/language-sss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustindowell22/language-sss.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustindowell22/language-sss/issues"
+  },
+  "keywords": [
+    "sss",
+    "css",
+    "sass",
+    "scss",
+    "postcss",
+    "sugarss",
+    "language",
+    "grammar",
+    "editor"
+  ]
+}

@@ -1,0 +1,88 @@
+scopeName: 'source.sss'
+name: 'SugarSS'
+
+fileTypes: [
+  'css'
+  'scss'
+  'sass'
+  'sss'
+]
+
+patterns: [
+  { include: '#at_rule' }
+
+  { include: '#comment_block' }
+  { include: '#comment_line' }
+
+  { include: '#function' }
+
+  { include: '#parent' }
+
+  { include: '#pseudo_class' }
+  { include: '#pseudo_element' }
+
+  { include: '#selector_class' }
+  { include: '#selector_id' }
+
+  { include: '#string_double' }
+  { include: '#string_single' }
+
+  { include: '#variable' }
+]
+
+repository:
+  # at-rule
+  at_rule:
+    match: '@[\\w-]+'
+    name: 'keyword.sss'
+
+  # comment
+  comment_block:
+    match: '/\\*.*\\*/'
+    name: 'comment.block.sss'
+
+  comment_line:
+    match: '//.*'
+    name: 'comment.line.sss'
+
+  # function
+  function:
+    match: '\\w+(?=\\()'
+    name: 'entity.name.function.sss'
+
+  #parent
+  parent:
+    match: '&'
+    name: 'entity.name.tag.reference.sss'
+
+  #pseudo
+  pseudo_class:
+    match: '\\:\\w+'
+    name: 'entity.other.attribute-name.pseudo-class.sss'
+
+  pseudo_element:
+    match: '\\:\\:\\w+'
+    name: 'entity.other.attribute-name.pseudo-element.sss'
+
+  #selector
+  selector_class:
+    match: '\\..*'
+    name: 'entity.other.attribute-name.class.sss'
+
+  selector_id:
+    match: '\\#.*'
+    name: 'entity.other.attribute-name.id.sss'
+
+  # string
+  string_double:
+    match: '\".*\"'
+    name: 'string.double.sss'
+
+  string_single:
+    match: '\'.*\''
+    name: 'string.single.sss'
+
+  #variable
+  variable:
+    match: '\\$[\\w-]+'
+    name: 'variable.sss'
