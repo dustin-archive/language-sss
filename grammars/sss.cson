@@ -57,20 +57,20 @@ repository:
 
   #pseudo
   pseudo_class:
-    match: '\\:\\w+'
+    match: '\\:[^ ][a-zA-Z0-9_\\-]*'
     name: 'entity.other.attribute-name.pseudo-class.sss'
 
   pseudo_element:
-    match: '\\:\\:\\w+'
+    match: '\\::[^ ][a-zA-Z0-9_\\-]*'
     name: 'entity.other.attribute-name.pseudo-element.sss'
 
   #selector
   selector_class:
-    match: '\\..*'
+    match: '\\.[a-zA-Z0-9_\\-]*'
     name: 'entity.other.attribute-name.class.sss'
 
   selector_id:
-    match: '\\#.*'
+    match: '\\#[a-zA-Z0-9_\\-]*'
     name: 'entity.other.attribute-name.id.sss'
 
   # string
