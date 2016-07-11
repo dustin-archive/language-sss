@@ -21,9 +21,9 @@ patterns: [
   { include: '#pseudo_class' }
   { include: '#pseudo_element' }
 
+  { include: '#selector_attribute' }
   { include: '#selector_class' }
   { include: '#selector_id' }
-  { include: '#selector_attribute' }
 
   { include: '#string_double' }
   { include: '#string_single' }
