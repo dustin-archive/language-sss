@@ -33,7 +33,7 @@ patterns: [
 repository:
   # at-rule
   at_rule:
-    match: '@[\\w-]+'
+    match: '@[a-zA-Z0-9_\\-]+'
     name: 'keyword.sss'
 
   # comment
@@ -47,7 +47,7 @@ repository:
 
   # function
   function:
-    match: '\\w+(?=\\()'
+    match: '[a-zA-Z0-9_\\-]+(?=\\()'
     name: 'entity.name.function.sss'
 
   #parent
@@ -57,20 +57,20 @@ repository:
 
   #pseudo
   pseudo_class:
-    match: '\\:[^ ][a-zA-Z0-9_\\-]*'
+    match: '\\:[^ ][a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.pseudo-class.sss'
 
   pseudo_element:
-    match: '\\::[^ ][a-zA-Z0-9_\\-]*'
+    match: '\\::[^ ][a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.pseudo-element.sss'
 
   #selector
   selector_class:
-    match: '\\.[a-zA-Z0-9_\\-]*'
+    match: '\\.[a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.class.sss'
 
   selector_id:
-    match: '\\#[a-zA-Z0-9_\\-]*'
+    match: '\\#[a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.id.sss'
 
   # string
@@ -84,5 +84,5 @@ repository:
 
   #variable
   variable:
-    match: '\\$[\\w-]+'
+    match: '\\$[a-zA-Z0-9_\\-]+'
     name: 'variable.sss'
