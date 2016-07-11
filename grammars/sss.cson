@@ -23,6 +23,7 @@ patterns: [
 
   { include: '#selector_class' }
   { include: '#selector_id' }
+  { include: '#selector_attribute' }
 
   { include: '#string_double' }
   { include: '#string_single' }
@@ -72,6 +73,10 @@ repository:
   selector_id:
     match: '\\#[a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.id.sss'
+
+  selector_attribute:
+    match: '(?!\\[)[a-zA-Z0-9_\\-]+(?=.*\\])'
+    name: 'entity.other.attribute-name.attribute.sss'
 
   # string
   string_double:
