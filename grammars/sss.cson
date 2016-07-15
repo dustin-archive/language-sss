@@ -17,6 +17,8 @@ patterns: [
   { include: '#flag' }
   { include: '#function' }
 
+  { include: '#number' }
+
   { include: '#parent' }
 
   { include: '#pseudo_class' }
@@ -56,6 +58,11 @@ repository:
   function:
     match: '[a-zA-Z0-9_\\-]+(?=\\()'
     name: 'entity.name.function.sss'
+
+  # number
+  number:
+    match: '[0-9][a-zA-Z%]*'
+    name: 'constant.other.number.sss'
 
   #parent
   parent:
