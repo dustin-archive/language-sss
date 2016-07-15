@@ -24,6 +24,7 @@ patterns: [
   { include: '#selector_attribute' }
   { include: '#selector_class' }
   { include: '#selector_id' }
+  { include: '#selector_placeholder' }
 
   { include: '#string_double' }
   { include: '#string_single' }
@@ -68,6 +69,10 @@ repository:
     match: '\\::[^ ][a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.pseudo-element.sss'
 
+  selector_attribute:
+    match: '(?!\\[)[a-zA-Z0-9_\\-]+(?=.*\\])'
+    name: 'entity.other.attribute-name.attribute.sss'
+
   selector_class:
     match: '\\.[a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.class.sss'
@@ -76,9 +81,9 @@ repository:
     match: '\\#[a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.id.sss'
 
-  selector_attribute:
-    match: '(?!\\[)[a-zA-Z0-9_\\-]+(?=.*\\])'
-    name: 'entity.other.attribute-name.attribute.sss'
+  selector_placeholder:
+    match: '\\%[a-zA-Z0-9_\\-]+'
+    name: 'entity.other.attribute-name.placeholder.sss'
 
   string_double:
     match: '\".*\"'
