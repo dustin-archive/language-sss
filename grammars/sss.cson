@@ -2,9 +2,6 @@ scopeName: 'source.sss'
 name: 'SugarSS'
 
 fileTypes: [
-  'css'
-  'scss'
-  'sass'
   'sss'
 ]
 
@@ -35,12 +32,10 @@ patterns: [
 ]
 
 repository:
-  # at-rule
   at_rule:
     match: '@[a-zA-Z0-9_\\-]+'
     name: 'keyword.sss'
 
-  # comment
   comment_block:
     match: '/\\*.*\\*/'
     name: 'comment.block.sss'
@@ -49,27 +44,22 @@ repository:
     match: '//.*'
     name: 'comment.line.sss'
 
-  # flag
   flag:
     match: '![a-zA-Z0-9_\\-]+'
     name: 'keyword.other.flag.sss'
 
-  # function
   function:
     match: '[a-zA-Z0-9_\\-]+(?=\\()'
     name: 'entity.name.function.sss'
 
-  # number
   number:
     match: '[0-9][a-zA-Z%]*'
     name: 'constant.other.number.sss'
 
-  #parent
   parent:
     match: '&'
     name: 'entity.name.tag.reference.sss'
 
-  #pseudo
   pseudo_class:
     match: '\\:[^ ][a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.pseudo-class.sss'
@@ -78,7 +68,6 @@ repository:
     match: '\\::[^ ][a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.pseudo-element.sss'
 
-  #selector
   selector_class:
     match: '\\.[a-zA-Z0-9_\\-]+'
     name: 'entity.other.attribute-name.class.sss'
@@ -91,7 +80,6 @@ repository:
     match: '(?!\\[)[a-zA-Z0-9_\\-]+(?=.*\\])'
     name: 'entity.other.attribute-name.attribute.sss'
 
-  # string
   string_double:
     match: '\".*\"'
     name: 'string.double.sss'
@@ -100,7 +88,6 @@ repository:
     match: '\'.*\''
     name: 'string.single.sss'
 
-  #variable
   variable:
     match: '\\$[a-zA-Z0-9_\\-]+'
     name: 'variable.sss'
