@@ -70,6 +70,7 @@ repository:
     name: 'entity.other.attribute-name.pseudo-element.sss'
 
   selector_attribute:
+    # this is not accurate enough - the begining [ is not honored
     match: '(?!\\[)[a-zA-Z0-9_\\-]+(?=.*\\])'
     name: 'entity.other.attribute-name.attribute.sss'
 
