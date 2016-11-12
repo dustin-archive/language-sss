@@ -14,7 +14,11 @@ patterns: [
   { include: '#flag' }
   { include: '#function' }
 
+  { include: '#interpolated' }
+
   { include: '#number' }
+
+  { include: '#operator' }
 
   { include: '#parent' }
 
@@ -53,9 +57,23 @@ repository:
     match: '[a-zA-Z0-9_\\-]+(?=\\()'
     name: 'entity.name.function.sss'
 
+  interpolated:
+    begin: '#{'
+    end: '}'
+    name: 'variable.interpolation.scss'
+    patterns: [
+      { include: '#string_double'}
+      { include: '#string_single'}
+      { include: '#variable'}
+    ]
+
   number:
     match: '[0-9][a-zA-Z%]*'
     name: 'constant.other.number.sss'
+
+  operator:
+    match: '(and|not|or)'
+    name: 'keyword.operator.logical.scss'
 
   parent:
     match: '&'
@@ -70,8 +88,9 @@ repository:
     name: 'entity.other.attribute-name.pseudo-element.sss'
 
   selector_attribute:
-    # this is not accurate enough - the begining [ is not honored
-    match: '(?!\\[)[a-zA-Z0-9_\\-]+(?=.*\\])'
+    begin: '\\['
+    match: '[a-zA-Z0-9_\\-]+(?=.*)'
+    end: '\\]'
     name: 'entity.other.attribute-name.attribute.sss'
 
   selector_class:
