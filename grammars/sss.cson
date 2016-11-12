@@ -16,9 +16,12 @@ patterns: [
 
   { include: '#interpolated' }
 
+  { include: '#math' }
+
   { include: '#number' }
 
-  { include: '#operator' }
+  { include: '#operator_comparison' }
+  { include: '#operator_logical' }
 
   { include: '#parent' }
 
@@ -60,20 +63,29 @@ repository:
   interpolated:
     begin: '#{'
     end: '}'
-    name: 'variable.interpolation.scss'
+    name: 'variable.interpolation.sss'
     patterns: [
       { include: '#string_double'}
       { include: '#string_single'}
       { include: '#variable'}
     ]
 
+  math:
+    # doesn't work yet
+    match: '\\b(\\+|-|\\*|/)\\b'
+    name: 'support.constant.mathematical-symbols.sss'
+
   number:
     match: '[0-9][a-zA-Z%]*'
     name: 'constant.other.number.sss'
 
-  operator:
-    match: '(and|not|or)'
-    name: 'keyword.operator.logical.scss'
+  operator_comparison:
+    match: '==|!=|<=|>=|<|>'
+    name: 'keyword.operator.comparison.sss'
+
+  operator_logical:
+    match: 'and|not|or'
+    name: 'keyword.operator.logical.sss'
 
   parent:
     match: '&'
